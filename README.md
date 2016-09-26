@@ -1,5 +1,5 @@
 ####Usage
 
 ```bash
-docker run -v $(pwd)/swagger.yaml:/swagger.yaml 21stio/dredd dredd /swagger.yaml  host:port --server-wait 3
+docker run --volume $(pwd)/swagger.yaml:/swagger.yaml --link webservice 21stio/dredd dredd /swagger.yaml  webservice:port --server-wait 3
 ```
